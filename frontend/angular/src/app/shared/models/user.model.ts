@@ -1,11 +1,18 @@
 import { BaseModel } from "app/shared/models/base.model";
 
+/**
+ * Basic User class
+ * 
+ * Author: jonathasdantas
+ */
 export class User extends BaseModel {
-  first_name: string;
-  last_name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   username:string;
   token: string;
   locale: string;
-  date_of_birth: Date;
+  dateOfBirth: Date;
+  firstSeenAt: Date;
+  lastSeenAt: Date;
 }

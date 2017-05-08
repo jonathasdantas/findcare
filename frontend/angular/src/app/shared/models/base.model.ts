@@ -1,6 +1,10 @@
-// Base Model with shared Attributes
+/**
+ * Shared attributes for the Models
+ * 
+ * Author: jonathasdantas
+ */
 export class BaseModel {
   id: number;
-  created_at: Date;
-  updated_at: Date;
+  createdAt: Date;
+  updatedAt: Date;
 }

@@ -22,9 +22,12 @@
 - date_of_birth: ```date```
 - locale: ```string```
 
-### 2Hands < User
+### TwoHands < User
 
+- aboutme: ```text```
 - location: ```string```
+- phone: ```string```
+- education: ```string```
 - skills: ```json```
   - Swinmming, Homework & tutoring, Cooking, Infants/Babies
 - specific_skills: ```json```
@@ -35,10 +38,7 @@
   - Pets, Non-smoker, etc
 - languages: ```json```
 - avaliability: ```json```
-- aboutme: ```text```
-- phone: ```string```
-- education: ```string```
-- references: ```Reference []```
+- references: ```UserReference []```
 - reviews: ```Review []```
 - schedule: ```Schedule []```
 
@@ -64,6 +64,8 @@
 - group: ```SkillGroup```
   - Home, Engineer, General, etc
 - experience: ```Experience``` (2hands json)
+- specific: ```boolean```
+- extra: ```boolean```
 
 ### Skill Group
 
@@ -79,7 +81,19 @@
 - name: ```string```
 - date: ```string``` (2hands json)
 
-### Reference
+### UserReference
 
 - user: ```User```
 - text: ```text```
+
+### UserReview
+
+- user: ```User```
+- rating: ```number```
+
+### Schedule
+
+- begin: ```Date```
+- end: ```Date```
+- user: User
+- twoHands: User
