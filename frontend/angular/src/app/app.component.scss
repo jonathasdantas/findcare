@@ -1,0 +1,11 @@
+$bootstrap-sass-asset-helper: true;
+
+//== Typography Override
+$font-family-sans-serif:  "Raleway";
+$font-family-serif: "Josefin Slab";
+$font-size-base: 16px;
+
+@import "/layout/header/header.component.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway');
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";

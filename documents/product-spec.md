@@ -28,16 +28,16 @@
 - location: ```string```
 - phone: ```string```
 - education: ```string```
-- skills: ```json```
+- skills: ```Skill []```
   - Swinmming, Homework & tutoring, Cooking, Infants/Babies
-- specific_skills: ```json```
+- specific_skills: ```Skill []```
   - Infants/Babies, Toddlers, Preschool, Kids with allergies
-- qualifications: ```json```
+- qualifications: ```Qualification []```
   - Driver License, CPR certificate, First Aid certificate, etc
-- extras: ```json```
+- extras: ```Skill []```
   - Pets, Non-smoker, etc
-- languages: ```json```
-- avaliability: ```json```
+- languages: ```Language []```
+- avaliability: ```Avaliability []```
 - references: ```UserReference []```
 - reviews: ```Review []```
 - schedule: ```Schedule []```
