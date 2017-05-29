@@ -3,15 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-
-import { ROUTES } from "app/app.routes";
+import { HeaderComponent, FooterComponent} from './layout';
 
 import { AuthModule } from "app/auth/auth.module";
+import { HomeModule } from "app/home/home.module";
+import { SharedModule, PageNotFoundComponent } from "app/shared";
+
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
+
+const appRoutes: Routes = [
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -20,11 +28,17 @@ import { AuthModule } from "app/auth/auth.module";
     FooterComponent
   ],
   imports: [
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(appRoutes),
+    Ng2PageScrollModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
-    AuthModule
+    AuthModule,
+    HomeModule,
+    SharedModule
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
