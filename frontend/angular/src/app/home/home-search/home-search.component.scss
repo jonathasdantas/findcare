@@ -1,12 +1,4 @@
 section {
-  min-height: 300px;
+  min-height: 500px;
   background: url('http://placehold.it/1920x1080') no-repeat center center;
-}
-
-.flex-box {
-  display: flex;
-
-  &.flex-items-center {
-    align-items: center;
-  }
 }

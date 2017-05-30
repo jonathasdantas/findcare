@@ -5,10 +5,7 @@
     </div>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a pageScroll href="#hows-it-works">How's it works?</a></li>
-      <li><a pageScroll href="#customers">Customers</a></li>
-      <li><a pageScroll href="#contact">Contact</a></li>
-      <li><a pageScroll href="#">About Us</a></li>
+      <li *ngFor="let section of sections"><a pageScroll href="#{{ section.id }}">{{ section.name }}</a></li>
     </ul>
   </div>
 </nav>
