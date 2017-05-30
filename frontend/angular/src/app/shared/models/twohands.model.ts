@@ -10,7 +10,9 @@ import { Schedule } from "app/shared/models/schedule.model";
 /**
  * Helper Model
  * 
- * Author: jonathasdantas
+ * @export
+ * @class TwoHands
+ * @extends {User}
  */
 export class TwoHands extends User {
   aboutme: string;
