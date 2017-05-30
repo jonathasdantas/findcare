@@ -2,9 +2,11 @@ import { BaseModel } from "app/shared/models/base.model";
 import { User } from "app/shared/models/user.model";
 
 /**
- * Schedule of the Helper
+ * Helper's Schedule
  * 
- * Author: jonathasdantas
+ * @export
+ * @class Schedule
+ * @extends {BaseModel}
  */
 export class Schedule extends BaseModel {
   begin: Date;

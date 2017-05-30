@@ -4,7 +4,9 @@ import { LanguageLevel } from "app/shared/models/language-level.model";
 /**
  * Language that the Helper speaks
  * 
- * Author: jonathasdantas
+ * @export
+ * @class Language
+ * @extends {BaseModel}
  */
 export class Language extends BaseModel {
   name: string;

@@ -1,8 +1,9 @@
-$navbar-height: 50px;
+$navbar-height: 40px;
 $navbar-button-padding: 10px;
 $navbar-footer-color: #FFF;
 
-.navbar {
+// Footer Menu
+nav {
   min-height: $navbar-height;
   margin-bottom: 0;
 
@@ -20,7 +21,8 @@ $navbar-footer-color: #FFF;
   }
 }
 
-.container-fluid {
+// Footer Size and Background
+.footer-wrapper {
   color: $navbar-footer-color;
   background-color: #666;
 

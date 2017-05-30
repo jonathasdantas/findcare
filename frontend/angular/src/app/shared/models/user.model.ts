@@ -1,9 +1,11 @@
 import { BaseModel } from "app/shared/models/base.model";
 
 /**
- * Basic User class
+ * Basic User Model
  * 
- * Author: jonathasdantas
+ * @export
+ * @class User
+ * @extends {BaseModel}
  */
 export class User extends BaseModel {
   firstName: string;

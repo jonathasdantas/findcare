@@ -5,7 +5,9 @@ import { SkillGroup } from "app/shared/models/skill-group.model";
 /**
  * Skills of the Helper
  * 
- * Author: jonathasdantas
+ * @export
+ * @class Skill
+ * @extends {BaseModel}
  */
 export class Skill extends BaseModel {
   name: string;

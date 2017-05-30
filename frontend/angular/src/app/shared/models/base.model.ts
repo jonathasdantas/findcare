@@ -1,7 +1,8 @@
 /**
  * Shared attributes for the Models
  * 
- * Author: jonathasdantas
+ * @export
+ * @class BaseModel
  */
 export class BaseModel {
   id: number;
