@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { PageScrollConfig } from "ng2-page-scroll";
 
 @Component({
@@ -7,6 +7,8 @@ import { PageScrollConfig } from "ng2-page-scroll";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() sections: any [];
 
   constructor() {
     PageScrollConfig.defaultDuration = 400;

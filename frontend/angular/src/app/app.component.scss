@@ -9,3 +9,12 @@ $font-size-base: 16px;
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway');
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// General Syles
+.flex-box {
+  display: flex;
+
+  &.flex-items-center {
+    align-items: center;
+  }
+}

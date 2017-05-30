@@ -1,0 +1,28 @@
+$navbar-height: 50px;
+$navbar-button-padding: 10px;
+$navbar-footer-color: #FFF;
+
+.navbar {
+  min-height: $navbar-height;
+  margin-bottom: 0;
+
+  li {
+    a {
+      padding-top: $navbar-button-padding;
+      padding-bottom: $navbar-button-padding;
+
+      color: $navbar-footer-color;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  color: $navbar-footer-color;
+  background-color: #666;
+
+  min-height: 200px;
+}

@@ -7,5 +7,22 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'app works!';
+  sections: any [] = [
+    {
+      name: 'How\'s it works?',
+      id: 'hows-it-works'
+    },
+    {
+      name: 'Customers',
+      id: 'customers'
+    },
+    {
+      name: 'Contact',
+      id: 'contact'
+    },
+    {
+      name: 'About Us',
+      id: 'about-us'
+    }
+  ];
 }

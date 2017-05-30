@@ -1,9 +1,9 @@
 // Variables Override
 $navbar-default-bg: rgba(211, 211, 211, 0.70);
-$navbar-height: 60px;
+$navbar-height: 80px;
 $navbar-border-radius: 0px;
 
 // Navbar Fixed Top Padding
 body { 
-  padding-top: 70px;
+  padding-top: $navbar-height;
 }

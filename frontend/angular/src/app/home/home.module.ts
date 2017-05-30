@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 
 import { Routes, RouterModule } from "@angular/router";
 import { HomeSearchComponent } from './home-search/home-search.component';
+import { HomeSectionComponent } from './home-section/home-section.component';
 
 const homeRoutes: Routes = [
   {
@@ -19,7 +20,8 @@ const homeRoutes: Routes = [
   ],
   declarations: [
     HomeComponent,
-    HomeSearchComponent
+    HomeSearchComponent,
+    HomeSectionComponent
   ]
 })
 export class HomeModule { }
