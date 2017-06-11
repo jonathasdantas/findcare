@@ -2,4 +2,4 @@
 
 ## Initialization
 
-- ```rails new giveme2hands --database=mysql --api```
+- ```rails new giveme2hands --database=mysql --api -T```
