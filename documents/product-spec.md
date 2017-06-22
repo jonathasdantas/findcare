@@ -2,7 +2,31 @@
 
 ## Main Concept
 
-- ...
+- Register
+  - To ask for Help (User Register Screen - [**SC01**](#user-register))
+  - To be a Helper (Helper Register Screen - [**SC02**](#helper-register))
+- Find someone to help you with any activity (Helper Search Screen - [**SC03**](#helper-search))
+  - Language Teacher
+  - Caregiver
+  - Baby Sitter
+  - Plumber
+  - Personal Chef
+  - Etc
+
+## Screens
+
+### User Register
+
+- SC01
+
+### Helper Register
+
+- SC02
+  - Enable second step of User Register - [**SC01**](#user-register)
+
+### Helper Search
+
+- SC03
 
 ## Entities
 
@@ -97,3 +121,14 @@
 - end: ```Date```
 - user: User
 - twoHands: User
+
+## Endpoints
+
+| Method   | Endpoint         | Functionality     |
+| -------- | ---------------- | ----------------- |
+| POST     | /register        | User Register     |
+| GET      | /helpers         | Helper Search     |
+| GET      | /helpers/:id     | Helper Search     |
+| POST     | /helpers         | Helper Register   |
+| PUT      | /helpers/:id     | Helper Register   |
+| DELETE   | /helpers/:id     | Helper Register   |
