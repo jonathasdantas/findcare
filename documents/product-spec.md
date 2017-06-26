@@ -32,21 +32,23 @@
 
 ### User
 
-- first_name: ```string```
-- last_name: ```string```
+- name: ```string```
 - email: ```string```
-- active: ```boolean```
-- password: ```string```
-- password_confirmation: ```string```
 - token: ```string```
-- created_at: ```datetime```
-- updated_at: ```datetime```
+- password_digest: ```string```
+- active: ```boolean```
+- blocked: ```boolean```
+- admin: ```boolean```
+- views: ```integer```
+- date_of_birth: ```date```
+- suspended_at: ```datetime```
+- suspended_till: ```datetime```
 - first_seen_at: ```datetime```
 - last_seen_at: ```datetime```
-- date_of_birth: ```date```
+- last_emailed_at: ```datetime```
 - locale: ```string```
 
-### TwoHands < User
+### Helper < User
 
 - aboutme: ```text```
 - location: ```string```
@@ -87,7 +89,7 @@
 - name: ```string```
 - group: ```SkillGroup```
   - Home, Engineer, General, etc
-- experience: ```Experience``` (2hands json)
+- experience: ```Experience```
 - specific: ```boolean```
 - extra: ```boolean```
 
@@ -103,7 +105,7 @@
 ### Qualification
 
 - name: ```string```
-- date: ```string``` (2hands json)
+- issue_date: ```string```
 
 ### UserReference
 
