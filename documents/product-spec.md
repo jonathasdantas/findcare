@@ -51,22 +51,35 @@
 ### Helper < User
 
 - aboutme: ```text```
+- objectives: ```string```
 - location: ```string```
 - phone: ```string```
-- education: ```string```
-- skills: ```Skill []```
-  - Swinmming, Homework & tutoring, Cooking, Infants/Babies
-- specific_skills: ```Skill []```
-  - Infants/Babies, Toddlers, Preschool, Kids with allergies
-- qualifications: ```Qualification []```
-  - Driver License, CPR certificate, First Aid certificate, etc
-- extras: ```Skill []```
+- education_level: ```EducationLevel```
+- education_field: ```EducationField```
+- education_place: ```string```
+- skills: ```Skill []``` NxM (HelperSkill)
+  - Web Developer, Product Manager
+- specific_skills: ```Skill []``` NxM (HelperSkill - where specific = true)
+  - Java, C#, Ruby, Ruby on Rails
+- qualifications: ```Qualification []``` NxM (HelperQualification)
+  - Certificates
+- extras: ```Skill []``` NxM (HelperSkill - where extra = true)
   - Pets, Non-smoker, etc
-- languages: ```Language []```
-- avaliability: ```Avaliability []```
+- languages: ```Language []``` NxM (HelperLanguage)
+- avaliability: ```Avaliability```
 - references: ```UserReference []```
-- reviews: ```Review []```
+- reviews: ```UserReview []```
 - schedule: ```Schedule []```
+
+### Education Level
+
+- name: ```string```
+  - Doctoral or Equivalent, Master or Equivalent, Bachelor or Equivalent, Etc
+
+### Education Field
+
+- name: ```string```
+  - Computer Science, Information Technology, Business
 
 ### Avaliability
 
@@ -76,7 +89,7 @@
 ### Language
 
 - name: ```string```
-- level: ```Language Level``` (2hands json)
+- level: ```LanguageLevel```
 - country: ```string```
 
 ## Language Level
@@ -122,7 +135,7 @@
 - begin: ```Date```
 - end: ```Date```
 - user: User
-- twoHands: User
+- helper: User
 
 ## Endpoints
 
