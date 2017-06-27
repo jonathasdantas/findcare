@@ -26,6 +26,9 @@ class User < ApplicationRecord
   has_many :user_reviews
   has_many :user_references
 
+  has_many :schedules
+  has_many :helpers_scheduled, class_name: "Helper", through: :schedules
+
   validates :name, presence: true
   validates :email, presence: true
   validates :password_digest, presence: true

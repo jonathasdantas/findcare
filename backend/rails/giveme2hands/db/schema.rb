@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170626192031) do
+ActiveRecord::Schema.define(version: 20170627181412) do
 
   create_table "avaliabilities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -36,6 +36,41 @@ ActiveRecord::Schema.define(version: 20170626192031) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "helper_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "helper_id",   null: false
+    t.integer  "language_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "helper_qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "helper_id",        null: false
+    t.integer  "qualification_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "helper_skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "helper_id",  null: false
+    t.integer  "skill_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "helpers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",            null: false
+    t.string   "aboutme",            null: false
+    t.string   "objectives",         null: false
+    t.string   "location"
+    t.string   "phone",              null: false
+    t.integer  "education_level_id", null: false
+    t.integer  "education_field_id", null: false
+    t.string   "education_place",    null: false
+    t.integer  "avaliability_id",    null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
   create_table "language_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -53,6 +88,15 @@ ActiveRecord::Schema.define(version: 20170626192031) do
   create_table "qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.date     "issue_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "begin"
+    t.datetime "end"
+    t.integer  "user_id"
+    t.integer  "helper_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,9 +126,9 @@ ActiveRecord::Schema.define(version: 20170626192031) do
 
   create_table "user_reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
-    t.decimal  "rating",     precision: 10
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.decimal  "rating",     precision: 2, scale: 2
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

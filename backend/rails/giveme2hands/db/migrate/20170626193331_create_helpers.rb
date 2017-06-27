@@ -1,6 +1,7 @@
 class CreateHelpers < ActiveRecord::Migration[5.0]
   def change
     create_table :helpers do |t|
+      t.integer :user_id, null: false
       t.string :aboutme, null: false
       t.string :objectives, null: false
       t.string :location

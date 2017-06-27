@@ -47,6 +47,8 @@
 - last_seen_at: ```datetime```
 - last_emailed_at: ```datetime```
 - locale: ```string```
+- references: ```UserReference []```
+- reviews: ```UserReview []```
 
 ### Helper < User
 
@@ -67,8 +69,6 @@
   - Pets, Non-smoker, etc
 - languages: ```Language []``` NxM (HelperLanguage)
 - avaliability: ```Avaliability```
-- references: ```UserReference []```
-- reviews: ```UserReview []```
 - schedule: ```Schedule []```
 
 ### Education Level
@@ -132,8 +132,8 @@
 
 ### Schedule
 
-- begin: ```Date```
-- end: ```Date```
+- begin: ```datetime```
+- end: ```datetime```
 - user: User
 - helper: User
 

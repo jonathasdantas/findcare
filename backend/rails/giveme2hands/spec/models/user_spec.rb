@@ -28,6 +28,9 @@ RSpec.describe User, type: :model do
   it { should have_many(:user_reviews) }
   it { should have_many(:user_references) }
 
+  it { should have_many(:schedules) }
+  it { should have_many(:helpers_scheduled).through(:schedules) }
+
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:email) }
   it { should validate_presence_of(:password_digest) }
