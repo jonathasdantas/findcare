@@ -1,16 +1,15 @@
 # == Schema Information
 #
-# Table name: user_reviews
+# Table name: education_fields
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  rating     :decimal(2, 2)
+#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class UserReview < ApplicationRecord
-  belongs_to :user
+require 'rails_helper'
 
-  validates :rating, presence: true
+RSpec.describe EducationField, type: :model do
+  it { validate_presence_of(:name) }
 end
