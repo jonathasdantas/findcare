@@ -141,8 +141,12 @@
 
 | Method   | Endpoint         | Functionality     |
 | -------- | ---------------- | ----------------- |
-| POST     | /register        | User Register     |
-| GET      | /helpers         | Helper Search     |
+| GET      | /users           | Users List        |
+| GET      | /users/:id       | Users Search      |
+| POST     | /users           | Users Register    |
+| PUT      | /users/:id       | Users Register    |
+| DELETE   | /users/:id       | Users Register    |
+| GET      | /helpers         | Helper List       |
 | GET      | /helpers/:id     | Helper Search     |
 | POST     | /helpers         | Helper Register   |
 | PUT      | /helpers/:id     | Helper Register   |
