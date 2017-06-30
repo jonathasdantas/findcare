@@ -23,6 +23,8 @@
 #
 
 class User < ApplicationRecord
+  has_secure_password
+
   has_many :user_reviews
   has_many :user_references
 
@@ -30,6 +32,6 @@ class User < ApplicationRecord
   has_many :helpers_scheduled, class_name: "Helper", through: :schedules
 
   validates :name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
 end
