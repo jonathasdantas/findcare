@@ -3,7 +3,6 @@ class CreateSkills < ActiveRecord::Migration[5.0]
     create_table :skills do |t|
       t.string :name
       t.integer :skill_group_id
-      t.integer :experience_id
       t.boolean :specific
       t.boolean :extra
 

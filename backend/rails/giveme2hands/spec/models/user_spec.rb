@@ -33,5 +33,11 @@ RSpec.describe User, type: :model do
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:email) }
+
+  it "validates uniqueness of email" do
+    FactoryGirl.create(:user, email: Faker::Internet.email)
+    should validate_uniqueness_of(:email)
+  end
+
   it { should validate_presence_of(:password_digest) }
 end

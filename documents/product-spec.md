@@ -89,20 +89,22 @@
 ### Language
 
 - name: ```string```
-- level: ```LanguageLevel```
 - country: ```string```
 
-## Language Level
+### Language Level
 
 - name: ```string```
   - Beginner, Elementary, Intermadiate, Advanced, Fluent, Native
+
+### HelperLanguage
+
+- level: ```LanguageLevel```
 
 ### Skill
 
 - name: ```string```
 - group: ```SkillGroup```
   - Home, Engineer, General, etc
-- experience: ```Experience```
 - specific: ```boolean```
 - extra: ```boolean```
 
@@ -110,27 +112,34 @@
 
 - name: ```string```
 
+### HelperSkill
+
+- experience: ```Experience```
+
 ### Experience
 
 - range: ```string```
-  - No Experience, Less then 6 months, 1 year, 2 years, 3 years, 4 years, 5+ years
+  - No Experience, Less than 6 months, 1 year, 2 years, 3 years, 4 years, 5+ years
 
 ### Qualification
 
 - name: ```string```
+
+### Helper Qualification (API)
+
 - issue_date: ```string```
 
-### UserReference
+### UserReference (API)
 
 - user: ```User```
 - text: ```text```
 
-### UserReview
+### UserReview (API)
 
 - user: ```User```
 - rating: ```number```
 
-### Schedule
+### Schedule (API)
 
 - begin: ```datetime```
 - end: ```datetime```

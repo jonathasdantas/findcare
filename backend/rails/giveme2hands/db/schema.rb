@@ -37,24 +37,27 @@ ActiveRecord::Schema.define(version: 20170627181412) do
   end
 
   create_table "helper_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "helper_id",   null: false
-    t.integer  "language_id", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "helper_id",         null: false
+    t.integer  "language_id",       null: false
+    t.integer  "language_level_id", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "helper_qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "helper_id",        null: false
     t.integer  "qualification_id", null: false
+    t.date     "issue_date"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
   create_table "helper_skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "helper_id",  null: false
-    t.integer  "skill_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "helper_id",     null: false
+    t.integer  "skill_id",      null: false
+    t.integer  "experience_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "helpers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -79,15 +82,13 @@ ActiveRecord::Schema.define(version: 20170627181412) do
 
   create_table "languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.integer  "language_level_id"
     t.string   "country"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.date     "issue_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -110,7 +111,6 @@ ActiveRecord::Schema.define(version: 20170627181412) do
   create_table "skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "skill_group_id"
-    t.integer  "experience_id"
     t.boolean  "specific"
     t.boolean  "extra"
     t.datetime "created_at",     null: false
