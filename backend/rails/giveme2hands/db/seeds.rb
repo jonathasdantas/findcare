@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Default User
+User.create([
+  name: 'Admin',
+  email: 'admin@admin.com',
+  password: '123123',
+  date_of_birth: '2017-01-01'
+])
+
 # Avaliabilities
 Avaliability.create([
   { name: 'Full-time' },

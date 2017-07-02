@@ -30,7 +30,7 @@
 
 ## Entities
 
-### User
+### User (API)
 
 - name: ```string```
 - email: ```string```
@@ -50,7 +50,7 @@
 - references: ```UserReference []```
 - reviews: ```UserReview []```
 
-### Helper < User
+### Helper < User (API)
 
 - aboutme: ```text```
 - objectives: ```string```
@@ -125,21 +125,21 @@
 
 - name: ```string```
 
-### Helper Qualification (API)
+### Helper Qualification
 
 - issue_date: ```string```
 
-### UserReference (API)
+### UserReference
 
 - user: ```User```
 - text: ```text```
 
-### UserReview (API)
+### UserReview
 
 - user: ```User```
 - rating: ```number```
 
-### Schedule (API)
+### Schedule
 
 - begin: ```datetime```
 - end: ```datetime```
