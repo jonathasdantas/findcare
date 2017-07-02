@@ -13,6 +13,7 @@ import { HomeModule } from "app/home/home.module";
 import { SharedModule, PageNotFoundComponent } from "app/shared";
 
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { UserModule } from "app/user/user.module";
 
 const appRoutes: Routes = [
   {
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     HttpModule,
     AuthModule,
     HomeModule,
-    SharedModule
+    SharedModule,
+    UserModule
   ],
   exports: [
     RouterModule
