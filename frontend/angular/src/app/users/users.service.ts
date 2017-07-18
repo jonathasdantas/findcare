@@ -3,7 +3,7 @@ import { User, ApiService } from "app/shared";
 import { Observable } from "rxjs/Observable";
 
 @Injectable()
-export class UserService {
+export class UsersService {
 
   private path: string = 'users';
 
